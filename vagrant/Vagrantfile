@@ -1,0 +1,14 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant::Config.run do |config|
+  config.vm.box = "centos-64-x64"
+  config.vm.box_url = "http://puppet-vagrant-boxes.puppetlabs.com/centos-64-x64-vbox4210.box"
+  config.vm.host_name = "puppetmaster-vagrant.local"
+  config.vm.network :hostonly, "33.33.33.51"
+  config.vm.provision :puppet do |puppet|
+    puppet.manifests_path = "../manifests"
+    puppet.manifest_file = "site.pp"
+    puppet.module_path = ["../modules"]
+  end
+end

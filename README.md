@@ -1,4 +1,3 @@
-bower-puppet-master
-===================
+Bowered puppet master configuration example
+=======
 
-Bowered puppet master configuration
