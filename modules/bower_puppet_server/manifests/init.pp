@@ -1,4 +1,4 @@
-class bower_puppet_master($environments) {
+class bower_puppet_server($environments) {
   include puppet
   include nodejs
 
@@ -17,40 +17,40 @@ class bower_puppet_master($environments) {
   }
 
   file { "/opt/puppet/scripts/update-modules.sh":
-    source => "puppet:///modules/bower_puppet_master/opt/puppet/scripts/update-modules.sh",
+    source => "puppet:///modules/bower_puppet_server/opt/puppet/scripts/update-modules.sh",
     mode => 0744,
     owner => "puppet",
     group => "puppet"
   }
 
   file { "/opt/puppet/bower-puppet-api/bower-puppet-api.js":
-    source => "puppet:///modules/bower_puppet_master/opt/puppet/bower-puppet-api/bower-puppet-api.js",
+    source => "puppet:///modules/bower_puppet_server/opt/puppet/bower-puppet-api/bower-puppet-api.js",
     mode => 0744,
     owner => "puppet",
     group => "puppet"
   }
 
   file { "/opt/puppet/bower-puppet-api/package.json":
-    source => "puppet:///modules/bower_puppet_master/opt/puppet/bower-puppet-api/package.json",
+    source => "puppet:///modules/bower_puppet_server/opt/puppet/bower-puppet-api/package.json",
     mode => 0744,
     owner => "puppet",
     group => "puppet"
   }
 
   file { "/opt/puppet/environments/.bowerrc":
-    source => "puppet:///modules/bower_puppet_master/opt/puppet/environments/.bowerrc",
+    source => "puppet:///modules/bower_puppet_server/opt/puppet/environments/.bowerrc",
     owner => "puppet",
     group => "puppet"
   }
 
   file { "/opt/puppet/environments/bower.json":
-    content => template("bower_puppet_master/opt/puppet/environments/bower.json"),
+    content => template("bower_puppet_server/opt/puppet/environments/bower.json"),
     owner => "puppet",
     group => "puppet"
   }
 
   file { "/opt/puppet/environments/package.json":
-    source => "puppet:///modules/bower_puppet_master/opt/puppet/environments/package.json",
+    source => "puppet:///modules/bower_puppet_server/opt/puppet/environments/package.json",
     owner => "puppet",
     group => "puppet"
   }
@@ -58,7 +58,7 @@ class bower_puppet_master($environments) {
 
   file { "/etc/init.d/bower-puppet-api":
     ensure => present,
-    source => "puppet:///modules/bower_puppet_master/etc/init.d/bower-puppet-api",
+    source => "puppet:///modules/bower_puppet_server/etc/init.d/bower-puppet-api",
     owner => "root",
     group => "root",
     mode => 0744,

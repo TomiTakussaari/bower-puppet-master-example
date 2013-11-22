@@ -38,7 +38,7 @@ class puppet {
 
   file { "/etc/puppet/puppet.conf":
     ensure => present,
-    content => template("bower_puppet_master/etc/puppet/puppet.conf"),
+    content => template("bower_puppet_server/etc/puppet/puppet.conf"),
     owner => "root",
     group => "root"
   }
