@@ -1,6 +1,8 @@
 Bowered puppet server - example
 =======
 
+Example environment for [bower_puppet_server](https://github.com/TomiTakussaari/bower_puppet_server) module
+
 ## See how it works:
 - Clone this repository
 - cd vagrant && vagrant up
