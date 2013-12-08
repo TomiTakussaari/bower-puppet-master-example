@@ -1,19 +1,19 @@
 {
   "name": "bower-puppet-server",
-  "version": "0.0.1",
+  "version": "0.5.0",
   "ignore": [
     "README.md"
   ],
   "dependencies": {},
   "private": "true",
   "homepage": "https://github.com/TomiTakussaari/bower_puppet_server",
-  "_release": "0.0.1",
+  "_release": "0.5.0",
   "_resolution": {
     "type": "version",
-    "tag": "0.0.1",
-    "commit": "c847ed691e0ba8f041164ac6c02fa9af4dec3914"
+    "tag": "0.5.0",
+    "commit": "5b5681dee1a769c3eb5d77b932685ea223193ace"
   },
   "_source": "https://github.com/TomiTakussaari/bower_puppet_server.git",
-  "_target": "0.0.1",
+  "_target": "0.5.0",
   "_originalSource": "https://github.com/TomiTakussaari/bower_puppet_server.git"
 }
